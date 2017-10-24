@@ -8,9 +8,11 @@ Change the config.json file with domain information, username and password to ac
 
 For the purpose of this task, following is the test account information :
 ```
-  "END_POINT": "@test2577.zendesk.com/api/v2/",
-  "username": "contact.miti@gmail.com",
-  "password": "qwerty12345"
+{
+  "END_POINT": "@sample.zendesk.com/api/v2/",
+  "username": "username",
+  "password": "example123"
+}
 ```
 The server listens to port 3000;
 
