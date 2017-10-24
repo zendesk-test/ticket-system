@@ -1,0 +1,33 @@
+extends layout
+
+block content
+
+  div(class="table-responsive")
+    table(class="table table-hover table-bordered" )
+      thead
+        tr
+          th Id
+          th Created AT
+          th Subject
+          th Status
+      tbody
+        for ticket in tickets
+          tr(class='clickable-row' data-href='tickets/id/#{ticket.id}')
+            td
+              !{ticket.id}
+            td
+              span.created-at= moment(ticket.created_at).format('DD MMM YYYY')
+            td
+              !{ticket.subject}
+            td
+              !{ticket.status}
+  div
+
+    if ( previous_page > 0 )
+      a(href='tickets/page/#{previous_page}')
+        button(type="button" class="btn btn-primary btn") <
+
+    if ( next_page <= total_page  )
+      a(href='tickets/page/#{next_page}')
+        button(type="button" class="btn btn-primary btn") >
+

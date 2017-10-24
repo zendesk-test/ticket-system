@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    base(href='/')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    script(src='http:///ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    link(rel='script', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    script.
+        jQuery(document).ready(function () {
+            $('.clickable-row').click(function () {
+                window.location = $(this).data("href");
+            });
+        });
+  body
+    block content

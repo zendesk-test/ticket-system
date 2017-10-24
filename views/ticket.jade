@@ -1,0 +1,30 @@
+extends layout
+
+
+
+block content
+
+    div(class="table-responsive")
+        table(class="table table-hover table-bordered")
+            thead
+                tr
+                    th Id
+                    th Created AT
+                    th Subject
+                    th Description
+                    th Status
+                    th Updated AT
+            tbody
+                    tr
+                        td
+                            !{id}
+                        td
+                            span.created-at= moment(created_at).format('DD MMM YYYY')
+                        td
+                            !{subject}
+                        td
+                            !{description}
+                        td
+                            !{status}
+                        td
+                            span.updated-at= moment(updated_at).format('DD MMM YYYY')
